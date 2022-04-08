@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Baskerville';
+    src: url("./assets/fonts/LibreBaskerville-Italic.ttf") format('truetype');
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'FiraSans';
+    src: url("./assets/fonts/FiraSans-Regular.ttf") format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'FiraSans';
+    src: url("./assets/fonts/FiraSans-Medium.ttf") format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'FiraSans';
+    src: url("./assets/fonts/FiraSans-SemiBold.ttf") format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'FiraSans';
+    src: url("./assets/fonts/FiraSans-Bold.ttf") format('truetype');
+    font-weight: bold;
+}
+
+.sidebar {
+    width: min(75vw, 400px);
+    transform: translateX(100%);
+    transition: cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s;
+}
+
+.show_sidebar {
+    width: min(75vw, 400px);
+    transform: translateX(0);
+    transition: cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s;
+}
