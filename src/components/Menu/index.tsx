@@ -18,6 +18,8 @@ function Menu() {
             <a href="#about" className="px-4">About</a>
             <span className="flex-grow self-stretch border-b-prime-400 border" />
             <a href="#projects" className="px-4">Projects</a>
+            <span className="flex-grow self-stretch border-b-prime-400 border" />
+            <a href="https://fs.kitsuiro.com/docs/CV_Daniel.pdf" className="px-4">Resume</a>
           </div>
         </div>
       </aside>

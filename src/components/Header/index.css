@@ -1,0 +1,57 @@
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeExpand {
+    from {
+        opacity: 0;
+        transform: scale(50%);
+    }
+    to {
+        opacity: 1;
+        transform: scale(100%);
+    }
+}
+
+.sidebar {
+    width: min(75vw, 400px);
+    transform: translateX(100%);
+    transition: cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s;
+}
+
+.show_sidebar {
+    width: min(75vw, 400px);
+    transform: translateX(0);
+    transition: cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s;
+}
+
+.nav-animated {
+    display: inline-block;
+    position: relative;
+    opacity: 0;
+}
+
+.nav-animated:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #4B6587;
+    transform-origin: bottom right;
+    transition: transform cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s;
+}
+
+.nav-animated:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
