@@ -5,9 +5,9 @@ function Menu() {
   const [isOpen, setOpen] = useState(false);
   return (
     <div className="md:hidden flex flex-col">
-      <div className="z-10"><Hamburger toggled={isOpen} toggle={setOpen} color="#4B6587" /></div>
+      <div className="z-20"><Hamburger toggled={isOpen} toggle={setOpen} color="#4B6587" /></div>
       <aside
-        className={`flex flex-col fixed top-0 right-0 bg-prime-200 min-h-screen justify-center ${isOpen ? 'show_sidebar' : 'sidebar'}`}
+        className={`flex flex-col fixed top-0 right-0 bg-prime-200 min-h-screen justify-center z-10 ${isOpen ? 'show_sidebar' : 'sidebar'}`}
       >
         <div className="flex justify-center">
           <div
