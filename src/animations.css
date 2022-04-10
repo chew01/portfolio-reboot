@@ -45,3 +45,27 @@
         transform: scale(100%);
     }
 }
+
+.link-animated {
+    display: inline-block;
+    position: relative;
+}
+
+.link-animated:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #4B6587;
+    transform-origin: bottom right;
+    transition: transform cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s;
+}
+
+.link-animated:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
