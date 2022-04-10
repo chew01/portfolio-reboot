@@ -2,11 +2,13 @@ import React from 'react';
 import Nav from '../Nav';
 import Menu from '../Menu';
 import './index.css';
+import { MenuProps } from '../../types';
 
-function Header() {
+function Header(props: MenuProps) {
+  const { menuOpen, setMenuOpen } = props;
   return (
     <header
-      className="flex justify-between items-center fixed w-full bg-prime-dark p-4 md:px-20 border-b border-b-prime-300"
+      className="flex justify-between items-center fixed w-full bg-prime-100 p-4 md:px-20 border-b border-b-prime-300 z-20"
     >
       <div
         className="font-title italic text-3xl md:text-5xl select-none text-prime-400"
@@ -15,7 +17,7 @@ function Header() {
         D.C.
       </div>
       <Nav />
-      <Menu />
+      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
     </header>
   );
 }

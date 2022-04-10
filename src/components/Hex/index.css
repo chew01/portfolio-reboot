@@ -1,0 +1,248 @@
+:root {
+    /* Change this to change the appearance of the hexaons */
+    --hex-width: 100px;
+    --hex-between: 5px;
+
+    /* Other hexagon dimentions */
+    --hex-height: calc(var(--hex-width) / 1.73 /* sqrt(3) */);
+    --hex-margin: calc(var(--hex-width) / 2);
+    --hex-border: calc(var(--hex-margin) / 1.73 /* sqrt(3) */);
+    --hex-transition: all .2s ease;
+
+    /* Colors */
+    --color-hex-default: #FFFFFF;
+    --color-hex-hover: #FFFFFF;
+    --bg-css: #1572B6;
+    --bg-git: #F14E32;
+    --bg-html: #E34F26;
+    --bg-javascript: #f0da3f;
+    --bg-react: #222222;
+    --bg-tailwind: #161D2D;
+    --bg-postgres: #336791;
+    --bg-mongo: #5D4038;
+    --bg-docker: #2497ED;
+    --bg-typescript: #007ACC;
+    --bg-node: #4e8b4a;
+    --bg-java: #5280A0;
+
+    /* Fills */
+    --fill-css: #FFFFFF;
+    --fill-git: #FFFFFF;
+    --fill-html: #FFFFFF;
+    --fill-javascript: #000000;
+    --fill-react: #61DAFB;
+    --fill-tailwind: #16BECB;
+    --fill-postgres: #FFFFFF;
+    --fill-mongo: #4BAF3C;
+    --fill-docker: #FFFFFF;
+    --fill-typescript: #FFFFFF;
+    --fill-node: #FFFFFF;
+    --fill-java: #FFFFFF;
+
+
+}
+
+/* Hexagons */
+.hexagon-container {
+    display: grid;
+    position: relative;
+    left: -50px;
+    grid-template-columns: var(--hex-width) var(--hex-width) var(--hex-width) var(--hex-width);
+    grid-auto-rows: calc(var(--hex-width) - 28.87px / 2);
+    grid-gap: var(--hex-between) var(--hex-between);
+    padding-bottom: var(--hex-border);
+}
+
+.hexagon {
+    align-items: center;
+    display: flex;
+    fill: white;
+    height: var(--hex-height);
+    justify-content: center;
+    margin: var(--hex-border) 0;
+    position: relative;
+    transition: var(--hex-transition);
+    width: var(--hex-width);
+}
+
+.hexagon::after,
+.hexagon::before {
+    border-left: var(--hex-margin) solid transparent;
+    border-right: var(--hex-margin) solid transparent;
+    content: "";
+    left: 0;
+    position: absolute;
+    transition: var(--hex-transition);
+    width: 0;
+}
+
+.hexagon::after {
+    border-top: var(--hex-border) solid var(--color-hex-default);
+    top: 100%;
+    width: 0;
+}
+
+.hexagon::before {
+    border-bottom: var(--hex-border) solid var(--color-hex-default);
+    bottom: 100%;
+}
+
+.hexagon:nth-child(8n + 5),
+.hexagon:nth-child(8n + 6),
+.hexagon:nth-child(8n + 7),
+.hexagon:nth-child(8n + 8) {
+    margin-left: calc(var(--hex-width) / 2 + var(--hex-between) / 2);
+}
+
+.hexagon > svg {
+    height: 75%;
+    transition: var(--hex-transition);
+}
+
+/* COLORS */
+
+.color-blank {
+    background-color: transparent;
+}
+
+.color-blank::after,
+.color-blank::before {
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.color-blank:hover {
+    fill: transparent;
+}
+
+.color-javascript {
+    background-color: var(--bg-javascript);
+    color: var(--fill-javascript);
+}
+
+.color-javascript::after,
+.color-javascript::before {
+    border-top-color: var(--bg-javascript);
+    border-bottom-color: var(--bg-javascript);
+}
+
+.color-html {
+    background-color: var(--bg-html);
+    color: var(--fill-html);
+}
+
+.color-html::after,
+.color-html::before {
+    border-top-color: var(--bg-html);
+    border-bottom-color: var(--bg-html);
+}
+
+.color-git {
+    background-color: var(--bg-git);
+    color: var(--fill-git);
+}
+
+.color-git::after,
+.color-git::before {
+    border-top-color: var(--bg-git);
+    border-bottom-color: var(--bg-git);
+}
+
+.color-css {
+    background-color: var(--bg-css);
+    color: var(--fill-css);
+}
+
+.color-css::after,
+.color-css::before {
+    border-top-color: var(--bg-css);
+    border-bottom-color: var(--bg-css);
+}
+
+.color-react {
+    background-color: var(--bg-react);
+    color: var(--fill-react);
+}
+
+.color-react::after,
+.color-react::before {
+    border-top-color: var(--bg-react);
+    border-bottom-color: var(--bg-react);
+}
+
+.color-tailwind {
+    background-color: var(--bg-tailwind);
+    color: var(--fill-tailwind);
+}
+
+.color-tailwind::after,
+.color-tailwind::before {
+    border-top-color: var(--bg-tailwind);
+    border-bottom-color: var(--bg-tailwind);
+}
+
+.color-postgres {
+    background-color: var(--bg-postgres);
+    color: var(--fill-postgres);
+}
+
+.color-postgres::after,
+.color-postgres::before {
+    border-top-color: var(--bg-postgres);
+    border-bottom-color: var(--bg-postgres);
+}
+
+.color-mongo {
+    background-color: var(--bg-mongo);
+    color: var(--fill-mongo);
+}
+
+.color-mongo::after,
+.color-mongo::before {
+    border-top-color: var(--bg-mongo);
+    border-bottom-color: var(--bg-mongo);
+}
+
+.color-docker {
+    background-color: var(--bg-docker);
+    color: var(--fill-docker);
+}
+
+.color-docker::after,
+.color-docker::before {
+    border-top-color: var(--bg-docker);
+    border-bottom-color: var(--bg-docker);
+}
+
+.color-typescript {
+    background-color: var(--bg-typescript);
+    color: var(--fill-typescript);
+}
+
+.color-typescript::after,
+.color-typescript::before {
+    border-top-color: var(--bg-typescript);
+    border-bottom-color: var(--bg-typescript);
+}
+
+.color-node {
+    background-color: var(--bg-node);
+    color: var(--fill-node);
+}
+
+.color-node::after,
+.color-node::before {
+    border-top-color: var(--bg-node);
+    border-bottom-color: var(--bg-node);
+}
+
+.color-java {
+    background-color: var(--bg-java);
+    color: var(--fill-java);
+}
+
+.color-java::after,
+.color-java::before {
+    border-top-color: var(--bg-java);
+    border-bottom-color: var(--bg-java);
+}

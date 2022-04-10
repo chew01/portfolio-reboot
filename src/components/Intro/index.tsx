@@ -12,7 +12,7 @@ function Intro() {
         className="font-block font-bold text-5xl text-slate-700 text-center opacity-0"
         style={finished ? { animation: '0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s 1 forwards fadeInUp' } : {}}
       >
-        Test test
+        Daniel Chew
       </div>
       <div
         className="font-block font-medium text-2xl text-prime-400 text-center opacity-0"

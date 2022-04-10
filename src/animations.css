@@ -30,3 +30,18 @@
         transform: scale(100%);
     }
 }
+
+@keyframes popOut {
+    0% {
+        opacity: 0;
+        transform: scale(30%);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(120%);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(100%);
+    }
+}

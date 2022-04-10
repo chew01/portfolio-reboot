@@ -13,7 +13,6 @@
 .nav-animated {
     display: inline-block;
     position: relative;
-    opacity: 0;
 }
 
 .nav-animated:after {

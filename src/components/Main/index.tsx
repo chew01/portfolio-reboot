@@ -3,9 +3,14 @@ import Intro from '../Intro';
 import About from '../About';
 import Projects from '../Projects';
 
-function Main() {
+type MainProps = {
+  menuOpen: boolean
+};
+
+function Main(props: MainProps) {
+  const { menuOpen } = props;
   return (
-    <main>
+    <main className={menuOpen ? 'blur select-none overflow-hidden transition-all ease-in' : ''}>
       <Intro />
       <About />
       <Projects />
