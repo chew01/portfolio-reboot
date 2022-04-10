@@ -17,15 +17,33 @@ function Menu(props: MenuProps) {
             <div
               className="flex flex-col items-center text-prime-400 font-link font-semibold text-2xl gap-4"
             >
-              <a href="#intro" className="px-4" onClick={() => setMenuOpen(false)}>Intro</a>
+              <a
+                href="#intro"
+                className="px-4 hover:text-slate-800 transition-colors"
+                onClick={() => setMenuOpen(false)}
+              >
+                Intro
+              </a>
               <span className="flex-grow self-stretch border-b-prime-400 border" />
-              <a href="#about" className="px-4" onClick={() => setMenuOpen(false)}>About</a>
+              <a
+                href="#about"
+                className="px-4 hover:text-slate-800 transition-colors"
+                onClick={() => setMenuOpen(false)}
+              >
+                About
+              </a>
               <span className="flex-grow self-stretch border-b-prime-400 border" />
-              <a href="#projects" className="px-4" onClick={() => setMenuOpen(false)}>Projects</a>
+              <a
+                href="#projects"
+                className="px-4 hover:text-slate-800 transition-colors"
+                onClick={() => setMenuOpen(false)}
+              >
+                Projects
+              </a>
               <span className="flex-grow self-stretch border-b-prime-400 border" />
               <a
                 href="https://fs.kitsuiro.com/docs/CV_Daniel.pdf"
-                className="px-4"
+                className="px-4 hover:text-slate-800 transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
                 Resume

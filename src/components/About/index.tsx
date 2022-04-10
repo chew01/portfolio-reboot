@@ -3,10 +3,11 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 function About() {
   return (
-    <section id="about" className="min-h-screen min-h-screen pt-20 mx-6 flex flex-col justify-center">
+    <section id="about" className="min-h-screen min-h-screen pt-20 flex flex-col justify-center">
       <AnimationOnScroll
-        animateIn="animate__fadeInLeft"
+        animateIn="animate__fadeIn"
         animateOnce
+        initiallyVisible
         className="flex flex-col gap-6"
       >
         <div className="text-prime-400 font-block font-semibold text-3xl">A bit about myself</div>
