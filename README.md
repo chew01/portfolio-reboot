@@ -1,6 +1,6 @@
 # Portfolio (reboot version)
 
-[![Build Status](https://jenkins.kitsuiro.com/buildStatus/icon?job=Kitsuiro-Landing-Page%2Fmain)](https://jenkins.kitsuiro.com/job/Kitsuiro-Landing-Page/job/main/)
+[![Build Status](https://jenkins.kitsuiro.com/buildStatus/icon?job=Kitsuiro-Portfolio%2Fmain)](https://jenkins.kitsuiro.com/job/Kitsuiro-Portfolio/job/main/)
 
 This project is my portfolio created with React and Tailwind V3.
 
