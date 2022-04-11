@@ -11,11 +11,13 @@ function Projects() {
       <CSSTransition in={projectsEntered} timeout={500} classNames="fade-right">
         <article className="grid gap-2 opacity-0 md:flex">
           <div className="bg-prime-300 row-start-1 col-start-1 h-full opacity-90 md:opacity-0" />
-          <img
-            src="https://fs.kitsuiro.com/assets/Thumbnail_D.png"
-            alt=""
-            className="col-start-1 row-start-1 object-cover h-full w-full self-center flex-1"
-          />
+          <div className="col-start-1 row-start-1 flex-1">
+            <img
+              src="https://fs.kitsuiro.com/assets/Thumbnail_D.png"
+              alt=""
+              className="object-cover h-full w-full"
+            />
+          </div>
           <div className="col-start-1 row-start-1 z-10 relative flex items-center flex-1">
             <div className="p-8 md:pr-0">
               <div className="text-slate-700 font-block font-medium">Featured Projects</div>
@@ -70,11 +72,13 @@ function Projects() {
             </div>
           </div>
           <div className="bg-prime-300 col-start-1 row-start-1 h-full opacity-90 md:opacity-0" />
-          <img
-            src="https://fs.kitsuiro.com/assets/Thumbnail_K.png"
-            alt=""
-            className="col-start-1 row-start-1 object-cover h-full w-full self-center flex-1"
-          />
+          <div className="col-start-1 row-start-1 flex-1">
+            <img
+              src="https://fs.kitsuiro.com/assets/Thumbnail_K.png"
+              alt=""
+              className="object-cover h-full w-full"
+            />
+          </div>
         </article>
       </CSSTransition>
     </section>

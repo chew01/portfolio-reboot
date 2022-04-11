@@ -7,7 +7,6 @@ function About() {
 
   return (
     <section id="about" className="min-h-screen pt-20 flex flex-col md:flex-row gap-6 md:gap-20 justify-center">
-      <Waypoint onEnter={() => setAboutEntered(true)} bottomOffset={300} />
       <div className="flex flex-col justify-center gap-2">
         <CSSTransition in={aboutEntered} timeout={500} classNames="fade-item">
           <div className="text-prime-400 font-block font-semibold text-3xl opacity-0">A bit about myself</div>
@@ -43,6 +42,7 @@ function About() {
           </div>
         </CSSTransition>
       </div>
+      <Waypoint onEnter={() => setAboutEntered(true)} bottomOffset={300} />
       <div className="flex flex-col justify-center gap-2 min-w-[240px] md:pb-40">
         <CSSTransition in={aboutEntered} timeout={500} classNames="fade-item">
           <div className="opacity-0" style={{ transitionDelay: '0.4s' }}>
