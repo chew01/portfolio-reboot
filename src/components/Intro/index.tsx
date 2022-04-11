@@ -6,10 +6,7 @@ function Intro() {
   const [string] = useWindupString('Greetings, Internet traveler.', { onFinished: () => setFinished(true) });
 
   return (
-    <section
-      id="intro"
-      className="min-h-screen pt-20 flex justify-center gap-8"
-    >
+    <section id="intro" className="min-h-screen mb-2 pt-20 flex justify-center gap-8">
       <div className="flex flex-col justify-center items-center sm:items-start sm:gap-2 max-w-2xl">
         <div className="font-code font-medium text-3xl text-gray-500 text-center">{string}</div>
         <div

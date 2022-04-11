@@ -1,15 +1,15 @@
-import React from 'react';
-import { AnimationOnScroll } from 'react-animation-on-scroll';
+import React, { useState } from 'react';
+import { CSSTransition } from 'react-transition-group';
+import { Waypoint } from 'react-waypoint';
 
 function Projects() {
+  const [projectsEntered, setProjectsEntered] = useState(false);
+
   return (
     <section id="projects" className="min-h-screen pt-20 flex flex-col gap-8 justify-center">
-      <AnimationOnScroll
-        animateIn="animate__fadeInLeft"
-        animateOnce
-        initiallyVisible
-      >
-        <article className="grid gap-2 md:flex">
+      <Waypoint onEnter={() => setProjectsEntered(true)} bottomOffset={300} />
+      <CSSTransition in={projectsEntered} timeout={500} classNames="fade-right">
+        <article className="grid gap-2 opacity-0 md:flex">
           <div className="bg-prime-300 row-start-1 col-start-1 h-full opacity-90 md:opacity-0" />
           <img
             src="https://fs.kitsuiro.com/assets/Thumbnail_D.png"
@@ -43,13 +43,9 @@ function Projects() {
             </div>
           </div>
         </article>
-      </AnimationOnScroll>
-      <AnimationOnScroll
-        animateIn="animate__fadeInRight"
-        animateOnce
-        initiallyVisible
-      >
-        <article className="grid gap-2 md:flex">
+      </CSSTransition>
+      <CSSTransition in={projectsEntered} timeout={500} classNames="fade-left">
+        <article className="grid gap-2 opacity-0 md:flex">
           <div className="col-start-1 row-start-1 z-10 relative flex items-center flex-1">
             <div className="p-8 md:pl-0">
               <div className="text-slate-700 font-block font-medium">Featured Projects</div>
@@ -80,7 +76,7 @@ function Projects() {
             className="col-start-1 row-start-1 object-cover h-full w-full self-center flex-1"
           />
         </article>
-      </AnimationOnScroll>
+      </CSSTransition>
     </section>
   );
 }

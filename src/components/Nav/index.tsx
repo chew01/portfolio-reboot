@@ -1,29 +1,42 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 
 function Nav() {
   return (
     <nav className="hidden md:flex font-menu font-medium text-xl text-prime-400 gap-8">
-      <a
-        href="#intro"
-        className="link-animated opacity-0"
+      <Link
+        activeClass="text-slate-900"
+        className="link-animated opacity-0 cursor-pointer transition-colors"
+        to="intro"
+        spy
+        smooth
+        duration={500}
         style={{ animation: '0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s 1 forwards fadeInDown' }}
       >
         Intro
-      </a>
-      <a
-        href="#about"
-        className="link-animated opacity-0"
+      </Link>
+      <Link
+        activeClass="text-slate-900"
+        className="link-animated opacity-0 cursor-pointer transition-colors"
+        to="about"
+        spy
+        smooth
+        duration={500}
         style={{ animation: '0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s 1 forwards fadeInDown' }}
       >
         About
-      </a>
-      <a
-        href="#projects"
-        className="link-animated opacity-0"
+      </Link>
+      <Link
+        activeClass="text-slate-900"
+        className="link-animated opacity-0 cursor-pointer transition-colors"
+        to="projects"
+        spy
+        smooth
+        duration={500}
         style={{ animation: '0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.75s 1 forwards fadeInDown' }}
       >
         Projects
-      </a>
+      </Link>
       <a
         href="https://fs.kitsuiro.com/docs/CV_Daniel.pdf"
         className="link-animated opacity-0"
